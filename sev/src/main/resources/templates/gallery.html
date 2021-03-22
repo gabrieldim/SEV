@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Features</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/templatemo-style.css" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row tm-brand-row">
+        <div class="col-lg-4 col-10">
+          <div class="tm-brand-container">
+            <div class="tm-brand-texts">
+              <h1 class="text-uppercase tm-brand-name">VOTE</h1>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-8 col-2 tm-nav-col">
+          <div class="tm-nav">
+            <nav class="navbar navbar-expand-lg navbar-light tm-navbar">
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto mr-0">
+                    <li class="nav-item active">
+                        <div class="tm-nav-link-highlight"></div>
+                        <a class="nav-link" href="/home"
+                        >Home <span class="sr-only">(current)</span></a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <div class="tm-nav-link-highlight"></div>
+                        <a class="nav-link" href="/about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="tm-nav-link-highlight"></div>
+                        <a class="nav-link" href="/voting">Voting</a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="tm-nav-link-highlight"></div>
+                        <a class="nav-link" href="/contact">Contact</a>
+                    </li>
+                    <li sec:authorize="isAnonymous()" class="nav-item">
+                        <div class="tm-nav-link-highlight"></div>
+                        <a class="nav-link" href="/auth/login">Sign In</a>
+                    </li>
+                    <li sec:authorize="isAnonymous()" class="nav-item">
+                        <div class="tm-nav-link-highlight"></div>
+                        <a class="nav-link" href="/register">Sign Up</a>
+                    </li>
+                    <li sec:authorize="isAuthenticated()" class="nav-item">
+                        <div class="tm-nav-link-highlight"></div>
+                        <span sec:authentication="name"></span>
+                    </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="row tm-welcome-row">
+        <div class="col-12">
+          <div
+            class="tm-welcome-parallax tm-center-child"
+            data-parallax="scroll"
+            data-image-src="img/maximalfocus.jpg"
+          >
+            
+          </div>
+        </div>
+      </div>
+
+
+       <!-- Service Start -->
+       <div class="service">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Features</h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="fa fa-low-vision"></i>
+                        </div>
+                        <h3>Anonymous Voting</h3>
+                        <p>
+                            Гласањето е анонимно и доверливо така што гласот не може да се поврзе со гласачот
+                        </p>
+                      
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="fa fa-users"></i>
+                        </div>
+                        <h3>Voting results</h3>
+                        <p>
+                            Резултатите од гласањето се лесно видливи и прикажани со Reports and Graphs
+                        </p>
+                        
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="fa fa-language"></i>
+                        </div>
+                        <h3>Multiple Languages</h3>
+                        <p>
+                            Текстот, верификацијата, копчињата се менуваат во зависност од избраниот јазик
+                        </p>
+                        
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="fa fa-user"></i>
+                        </div>
+                        <h3>Candidate Profiles</h3>
+                        <p>
+                            Гласачите имаат можност да прочитаат биографија, визија за кандидатите <br>
+                            <a class="textImage" style="text-decoration: underline" href="voting.html" >Learn More</a>
+                        </p>
+                       
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="fa fa-tablet"></i>
+                        </div>
+                        <h3>Multiple Ways to Vote</h3>
+                        <p>
+                            Корисниците можат да гласаат електронски преку компјутер, телефон, таблет
+                        </p>
+                        
+                    </div>
+                </div>
+              
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+        <!-- Page footer -->
+        <footer class="row tm-page-footer">
+            <p class="col-12 tm-copyright-text mb-0">
+                Copyright &copy; 2021 Secure Electronic Voting - SEV ✔
+            </p>
+        </footer>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/parallax.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      $(function() {
+        /* Isotope Gallery */
+
+        // init isotope
+        var $gallery = $(".tm-gallery").isotope({
+          itemSelector: ".tm-gallery-item",
+          layoutMode: "fitRows"
+        });
+        // layout Isotope after each image loads
+        $gallery.imagesLoaded().progress(function() {
+          $gallery.isotope("layout");
+        });
+
+        $(".filters-button-group").on("click", "a", function() {
+          var filterValue = $(this).attr("data-filter");
+          $gallery.isotope({ filter: filterValue });
+          console.log("Filter value: " + filterValue);
+        });
+
+        /* Tabs */
+        $(".tabgroup > div").hide();
+        $(".tabgroup > div:first-of-type").show();
+        $(".tabs a").click(function(e) {
+          e.preventDefault();
+          var $this = $(this),
+            tabgroup = "#" + $this.parents(".tabs").data("tabgroup"),
+            others = $this
+              .closest("li")
+              .siblings()
+              .children("a"),
+            target = $this.attr("href");
+          others.removeClass("active");
+          $this.addClass("active");
+
+          // Scroll to tab content (for mobile)
+          if ($(window).width() < 992) {
+            $("html, body").animate(
+              {
+                scrollTop: $("#tmGallery").offset().top
+              },
+              200
+            );
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

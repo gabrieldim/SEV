@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Formular</title>
+    <link rel="stylesheet" href="css/formular.css" />
+</head>
+<body>
+<form style="border:2px solid #ccc;width:40%; margin-left: 370px">
+    <div class="container">
+        <h1 style="text-align: center">SEV</h1>
+        <p style="text-align: center">Please fill in this form to vote ✔</p>
+        <hr>
+        <input type="radio" id="JoeBiden" name="gender" value="male">
+        <label for="JoeBiden">Political party: <em>Democratic</em> - <strong>JOE BIDEN</strong> </label><br>
+        <input type="radio" id="BarackObama" name="gender" value="female">
+        <label for="BarackObama">Political party: <em>Democratic</em> - <strong>BARACK OBAMA</strong> </label><br>
+        <input type="radio" id="DonaldTrump" name="gender" value="other">
+        <label for="DonaldTrump">Political party: <em>Republican</em> - <strong>DONALD TRUMP</strong></label>
+
+        <div class="clearfix">
+            <button style="width: 100px;" type="submit" class="tm-btn-submit">VOTE</button>
+        </div>
+    </div>
+</form>
+<p style="background-color: black"> **При клик на VOTE да се прикаже поарака успешно гласање. И две копчиња 'ок' кое ќе води
+до индекс и 'резултати' кое ќе покаже моменталните резултати.</p>
+<!-- Page footer -->
+<footer class="row tm-page-footer">
+    <p class="col-12 tm-copyright-text mb-0">
+        Copyright &copy; 2021 Secure Electronic Voting - SEV ✔
+    </p>
+</footer>
+
+</body>
+</html>
