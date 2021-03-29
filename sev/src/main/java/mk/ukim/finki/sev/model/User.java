@@ -23,6 +23,11 @@ public class User implements UserDetails {
 
     private String password;
 
+    private String email;
+
+    @Column(name = "has_voted")
+    private Boolean hasVoted;
+
 
     private boolean isAccountNonExpired = true;
     private boolean isAccountNonLocked = true;
@@ -36,15 +41,23 @@ public class User implements UserDetails {
     public User() {
     }
 
-    public User(String username, String firstName, String lastName, String password, Role role) {
+    public User(String username, String firstName, String lastName, String password, Role role, String email) {
         this.username = username;
         this.firstName = firstName;
         this.lastName = lastName;
         this.password = password;
         this.role = role;
+        this.email= email;
+        this.hasVoted = false;
     }
 
+    public String getEmail() {
+        return email;
+    }
 
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
@@ -101,5 +114,13 @@ public class User implements UserDetails {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    public Boolean getHasVoted() {
+        return hasVoted;
+    }
+
+    public void setHasVoted(Boolean hasVoted) {
+        this.hasVoted = hasVoted;
     }
 }

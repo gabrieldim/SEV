@@ -1,0 +1,14 @@
+/home/user1/Desktop/SEV/cert-email-sender/src/main/java/mk/ukim/finki/sev/controller/EmailSender.java
+/home/user1/Desktop/SEV/cert-email-sender/src/main/java/mk/ukim/finki/sev/SevApplication.java
+/home/user1/Desktop/SEV/cert-email-sender/src/main/java/mk/ukim/finki/sev/controller/HomeController.java
+/home/user1/Desktop/SEV/cert-email-sender/src/main/java/mk/ukim/finki/sev/model/Role.java
+/home/user1/Desktop/SEV/cert-email-sender/src/main/java/mk/ukim/finki/sev/service/impl/MailSenderServiceImpl.java
+/home/user1/Desktop/SEV/cert-email-sender/src/main/java/mk/ukim/finki/sev/config/security/WebSecurityConfig.java
+/home/user1/Desktop/SEV/cert-email-sender/src/main/java/mk/ukim/finki/sev/model/User.java
+/home/user1/Desktop/SEV/cert-email-sender/src/main/java/mk/ukim/finki/sev/service/MailSenderService.java
+/home/user1/Desktop/SEV/cert-email-sender/src/main/java/mk/ukim/finki/sev/config/security/PasswordAndUsernameAuthenticationProvider.java
+/home/user1/Desktop/SEV/cert-email-sender/src/main/java/mk/ukim/finki/sev/service/impl/UserServiceImpl.java
+/home/user1/Desktop/SEV/cert-email-sender/src/main/java/mk/ukim/finki/sev/repository/UserRepository.java
+/home/user1/Desktop/SEV/cert-email-sender/src/main/java/mk/ukim/finki/sev/config/security/CreateTestUsers.java
+/home/user1/Desktop/SEV/cert-email-sender/src/main/java/mk/ukim/finki/sev/controller/RegisterController.java
+/home/user1/Desktop/SEV/cert-email-sender/src/main/java/mk/ukim/finki/sev/service/UserService.java

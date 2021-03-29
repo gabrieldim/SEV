@@ -1,10 +1,17 @@
 package mk.ukim.finki.sev.config.security;
 
+import mk.ukim.finki.sev.service.UserService;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.core.authority.AuthorityUtils;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 @Configuration
@@ -13,11 +20,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     private final PasswordEncoder passwordEncoder;
     private final PasswordAndUsernameAuthenticationProvider authenticationProvider;
+    private final UserService userService;
 
     public WebSecurityConfig(PasswordEncoder passwordEncoder,
-                             PasswordAndUsernameAuthenticationProvider authenticationProvider) {
+                             PasswordAndUsernameAuthenticationProvider authenticationProvider, UserService userService) {
         this.passwordEncoder = passwordEncoder;
         this.authenticationProvider = authenticationProvider;
+        this.userService = userService;
     }
 
     @Override
@@ -30,20 +39,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .anyRequest()
                 .authenticated()
                 .and()
-                .formLogin()
-                .loginPage("/auth/login").permitAll()
-                .failureUrl("/auth/login?error=BadCredentials")
-                .defaultSuccessUrl("/home", true)
-                .and()
-                .logout()
-                .logoutUrl("/auth/logout")
-                .clearAuthentication(true)
-                .invalidateHttpSession(true)
-                .deleteCookies("JSESSIONID")
-                .logoutSuccessUrl("/auth/login");
-//                .and()
-//                .exceptionHandling().accessDeniedPage("/access_denied");
-
+                .x509()
+                .subjectPrincipalRegex("CN=(.*?)(?:,|$)")
+                .userDetailsService(this.userService);
     }
 
     @Override
@@ -51,5 +49,19 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         auth.authenticationProvider(authenticationProvider);
     }
 
+    @Bean
+    public UserDetailsService userDetailsService() {
+        return new UserDetailsService() {
+            @Override
+            public UserDetails loadUserByUsername(String username) {
+                if (username.equals("Bob")) {
+                    return new User(username, "",
+                            AuthorityUtils
+                                    .commaSeparatedStringToAuthorityList("ROLE_USER"));
+                }
+                throw new UsernameNotFoundException("User not found!");
+            }
+        };
+    }
 
 }

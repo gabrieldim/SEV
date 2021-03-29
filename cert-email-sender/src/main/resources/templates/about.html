@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>About</title>
+  <!--
+  Next Level CSS Template
+  https://templatemo.com/tm-532-next-level
+  -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" />
+  <link rel="stylesheet" href="/css/all.min.css" />
+  <link rel="stylesheet" href="/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/css/templatemo-style.css" />
+</head>
+<body>
+<div class="container-fluid">
+  <div class="row tm-brand-row">
+    <div class="col-lg-4 col-10">
+      <div class="tm-brand-container">
+        <div class="tm-brand-texts">
+          <h1 class="text-uppercase tm-brand-name">VOTE</h1>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-8 col-2 tm-nav-col">
+      <div class="tm-nav">
+        <nav class="navbar navbar-expand-lg navbar-light tm-navbar">
+          <button
+                  class="navbar-toggler"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#navbarNav"
+                  aria-controls="navbarNav"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto mr-0">
+              <li class="nav-item active">
+                <div class="tm-nav-link-highlight"></div>
+                <a class="nav-link" href="/home"
+                >Home <span class="sr-only">(current)</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <div class="tm-nav-link-highlight"></div>
+                <a class="nav-link" href="https://localhost:8444/vote">Vote</a>
+              </li>
+              <li class="nav-item">
+                <div class="tm-nav-link-highlight"></div>
+                <a class="nav-link" href="/about">About</a>
+              </li>
+              <li class="nav-item">
+                <div class="tm-nav-link-highlight"></div>
+                <a class="nav-link" href="/contact">Contact</a>
+              </li>
+              <li sec:authorize="isAnonymous()" class="nav-item">
+                <div class="tm-nav-link-highlight"></div>
+                <a class="nav-link" href="/register">Register</a>
+              </li>
+              <li sec:authorize="isAuthenticated()" class="nav-item">
+                <div class="tm-nav-link-highlight"></div>
+                <span sec:authentication="name"></span>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <div class="row tm-welcome-row">
+    <div class="col-12">
+      <div
+              class="tm-welcome-parallax tm-center-child"
+              data-parallax="scroll"
+              data-image-src="img/about-us.jpg"
+      >
+      </div>
+    </div>
+  </div>
+  <section class="row tm-pt-4 tm-pb-6">
+    <div class="col-12 tm-tabs-container tm-page-cols-container">
+      <div class="tm-page-col-left tm-tab-links">
+        <ul class="tabs clearfix" data-tabgroup="first-tab-group">
+          <li>
+            <a href="#tab1" class="active">
+              <div class="tm-tab-icon"></div>
+              About Us
+            </a>
+          </li>
+          <li>
+            <a href="#tab2" class="">
+              <div class="tm-tab-icon"></div>
+              Vision and Mission
+            </a>
+          </li>
+          <li>
+            <a href="#tab3" class="">
+              <div class="tm-tab-icon"></div>
+              Our History
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="tm-page-col-right tm-tab-contents">
+        <div id="first-tab-group" class="tabgroup">
+          <div id="tab1">
+            <div class="text-content">
+              <h3 class="tm-text-secondary tm-mb-5">
+                About Us
+              </h3>
+              <p class="tm-mb-5">
+                Above pink girl photo is provided by Moose Photos from
+                Pexels. This is a tab content area. There are 3 tabs at the
+                left side. Curabitur porttitor metus nisl. Nullam nec dictum
+                dolor. Sed ultricies purus nec suscipit vulputate. Fusce a
+                massa eu orci vulputate varius. Quisque quis ullamcorper
+                sapien. Integer eu luctus nulla, vel viverra odio.
+              </p>
+              <p class="tm-mb-5">
+                Praesent id felis ac erat elementum condimentum.
+                Pellentesque a libero vitae nisi vestibulum tempor vitae
+                vitae nulla. Praesent ut eleifend ligula, nec pretium erat.
+                Suspendisse nec magna id massa sollicitudin aliquam eget ut
+                turpis.
+              </p>
+            </div>
+          </div>
+          <div id="tab2">
+            <div class="text-content">
+              <h3 class="tm-text-secondary tm-mb-5">Vision and Mission</h3>
+              <p class="tm-mb-5">
+                Nam consequat, leo vitae aliquet dignissim, leo est laoreet
+                nibh, nec dictum libero justo vitae dolor. Donec tristique
+                eros at nisi elementum efficitur. Proin ornare feugiat ex
+                placerat pellenteqsue. Nulla convallis est volutpat ex
+                ultrices facilisis.
+              </p>
+              <p class="tm-mb-5">
+                Etiam egestas metus vitae est interdum, in eleifend nunc
+                volutpat. Aliquam molestie ipsum quis suscipit lacinia.
+                Mauris turpis libero, iaculis non dictum ac, ornare a massa.
+                Duis id lorem purus. Fusce viverra ullamcorper metus.
+                Curabitur puvinar suscipit sapien ac blandit. Aliquam vel
+                pulvinar purus, sit amet luctus urna.
+              </p>
+            </div>
+          </div>
+          <div id="tab3">
+            <div class="text-content">
+              <h3 class="tm-text-secondary tm-mb-5">Our History</h3>
+              <p class="tm-mb-5">
+                Mauris turpis libero, iaculis non dictum ac, ornare a massa.
+                Duis id lorem purus. Fusce viverra ullamcorper metus.
+                Curabitur puvinar suscipit sapien ac blandit. Aliquam vel
+                pulvinar purus, sit amet luctus urna. Nulla convallis est
+                volutpat ex ultrices facilisis.
+              </p>
+              <p class="tm-mb-5">
+                Etiam egestas metus vitae est interdum, in eleifend nunc
+                volutpat. Aliquam molestie ipsum quis suscipit lacinia. Nam
+                consequat, leo vitae aliquet dignissim, leo est laoreet
+                nibh, nec dictum libero justo vitae dolor. Donec tristique
+                eros at nisi elementum efficitur. Proin ornare feugiat ex
+                placerat pellenteqsue.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Page footer -->
+  <footer class="row tm-page-footer">
+    <p class="col-12 tm-copyright-text mb-0">
+      Copyright &copy; 2021 Secure Electronic Voting - SEV ✔
+    </p>
+  </footer>
+</div>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/parallax.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script>
+  $(function() {
+    // Tabs
+    $(".tabgroup > div").hide();
+    $(".tabgroup > div:first-of-type").show();
+    $(".tabs a").click(function(e) {
+      e.preventDefault();
+      var $this = $(this),
+              tabgroup = "#" + $this.parents(".tabs").data("tabgroup"),
+              others = $this
+                      .closest("li")
+                      .siblings()
+                      .children("a"),
+              target = $this.attr("href");
+      others.removeClass("active");
+      $this.addClass("active");
+      $(tabgroup)
+              .children("div")
+              .hide();
+      $(target).show();
+
+      // Scroll to tab content (for mobile)
+      if ($(window).width() < 992) {
+        $("html, body").animate(
+                {
+                  scrollTop: $("#first-tab-group").offset().top
+                },
+                200
+        );
+      }
+    });
+  });
+</script>
+</body>
+</html>

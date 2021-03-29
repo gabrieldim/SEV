@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Profile</title>
+  <!--
+  Next Level CSS Template
+  https://templatemo.com/tm-532-next-level
+  -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" />
+  <link rel="stylesheet" href="/css/all.min.css" />
+  <link rel="stylesheet" href="/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/css/templatemo-style.css" />
+</head>
+<body>
+<div class="container-fluid">
+  <div class="row tm-brand-row">
+    <div class="col-lg-4 col-10">
+      <div class="tm-brand-container">
+        <div class="tm-brand-texts">
+          <h1 class="text-uppercase tm-brand-name">VOTE</h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-8 col-2 tm-nav-col">
+      <div class="tm-nav">
+        <nav class="navbar navbar-expand-lg navbar-light tm-navbar">
+          <button
+                  class="navbar-toggler"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#navbarNav"
+                  aria-controls="navbarNav"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto mr-0">
+              <li class="nav-item active">
+                <div class="tm-nav-link-highlight"></div>
+                <a class="nav-link" href="/home"
+                >Home <span class="sr-only">(current)</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <div class="tm-nav-link-highlight"></div>
+                <a class="nav-link" href="https://localhost:8444/vote">Vote</a>
+              </li>
+              <li class="nav-item">
+                <div class="tm-nav-link-highlight"></div>
+                <a class="nav-link" href="/about">About</a>
+              </li>
+              <li class="nav-item">
+                <div class="tm-nav-link-highlight"></div>
+                <a class="nav-link" href="/contact">Contact</a>
+              </li>
+              <li sec:authorize="isAnonymous()" class="nav-item">
+                <div class="tm-nav-link-highlight"></div>
+                <a class="nav-link" href="/register">Register</a>
+              </li>
+              <li sec:authorize="isAuthenticated()" class="nav-item">
+                <div class="tm-nav-link-highlight"></div>
+                <span sec:authentication="name"></span>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <div class="row tm-welcome-row">
+    <div class="col-12">
+      <div
+              class="tm-welcome-parallax tm-center-child"
+              data-parallax="scroll"
+              data-image-src="img/who.jpg"
+      >
+      </div>
+    </div>
+  </div>
+
+  <section class="row ">
+
+    <div class="tm-gallery-item category-2">
+      <figure class="effect-bubba">
+        <img
+                src="https://api.time.com/wp-content/uploads/2019/09/joe-biden-ukraine-fundraising.jpg"
+                alt="Gallery item"
+                class="img-fluid"
+        />
+        <figcaption>
+          <p class="textImage">
+            <strong>JOE BIDEN</strong> <br><br>
+            Political party: <em>Democratic</em><br>
+            Joseph Robinette Biden Jr. (born November 20, 1942) is an American politician serving as
+            the 46th president of the United States. A member of the Democratic Party,
+            he served as the 47th vice president from 2009 to 2017 under Barack Obama and
+            represented Delaware in the United States Senate from 1973 to 2009.
+          </p>
+        </figcaption>
+      </figure>
+    </div>
+    <div class="tm-gallery-item category-2">
+      <figure class="effect-bubba">
+        <img
+                src="https://www.whitehouse.gov/wp-content/uploads/2021/01/45_donald_trump.jpg"
+                alt="Gallery item"
+                class="img-fluid"
+        />
+        <figcaption>
+          <p class="textImage">
+            <strong>DONALD TRUMP</strong> <br><br>
+            Political party: <em>Republican</em><br>
+            Donald John Trump (born June 14, 1946) is an American media personality,
+            businessman, and politician who served as the 45th president of the United States from 2017 to 2021.
+          </p>
+        </figcaption>
+      </figure>
+    </div>
+    <div class="tm-gallery-item category-2">
+      <figure class="effect-bubba">
+        <img
+                src="https://www.biography.com/.image/t_share/MTE4MDAzNDEwNzg5ODI4MTEw/barack-obama-12782369-1-402.jpg"
+                alt="Gallery item"
+                class="img-fluid"
+        />
+        <figcaption>
+          <p class="textImage">
+            <strong>BARACK OBAMA</strong> <br><br>
+            Political party: <em>Democratic</em><br>
+            Barack Hussein Obama II (born August 4, 1961) is an American politician and attorney
+            who served as the 44th president of the United States from 2009 to 2017.
+            A member of the Democratic Party, Obama was the first African-American president of
+            the United States. He previously served as a U.S. senator from Illinois from 2005 to
+            2008 and as an Illinois state senator from 1997 to 2004.
+          </p>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+
+  <!-- Page footer -->
+  <footer class="row tm-page-footer">
+    <p class="col-12 tm-copyright-text mb-0">
+      Copyright &copy; 2021 Secure Electronic Voting - SEV ✔
+    </p>
+  </footer>
+</div>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/parallax.min.js"></script>
+<script src="/js/imagesloaded.pkgd.min.js"></script>
+<script src="/js/isotope.pkgd.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script>
+  $(function() {
+    /* Isotope Gallery */
+
+    // init isotope
+    var $gallery = $(".tm-gallery").isotope({
+      itemSelector: ".tm-gallery-item",
+      layoutMode: "fitRows"
+    });
+    // layout Isotope after each image loads
+    $gallery.imagesLoaded().progress(function() {
+      $gallery.isotope("layout");
+    });
+
+    $(".filters-button-group").on("click", "a", function() {
+      var filterValue = $(this).attr("data-filter");
+      $gallery.isotope({ filter: filterValue });
+      console.log("Filter value: " + filterValue);
+    });
+
+    /* Tabs */
+    $(".tabgroup > div").hide();
+    $(".tabgroup > div:first-of-type").show();
+    $(".tabs a").click(function(e) {
+      e.preventDefault();
+      var $this = $(this),
+              tabgroup = "#" + $this.parents(".tabs").data("tabgroup"),
+              others = $this
+                      .closest("li")
+                      .siblings()
+                      .children("a"),
+              target = $this.attr("href");
+      others.removeClass("active");
+      $this.addClass("active");
+
+      // Scroll to tab content (for mobile)
+      if ($(window).width() < 992) {
+        $("html, body").animate(
+                {
+                  scrollTop: $("#tmGallery").offset().top
+                },
+                200
+        );
+      }
+    });
+  });
+</script>
+</body>
+</html>

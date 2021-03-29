@@ -1,0 +1,14 @@
+mk/ukim/finki/sev/controller/HomeController.class
+mk/ukim/finki/sev/SevApplication.class
+mk/ukim/finki/sev/repository/UserRepository.class
+mk/ukim/finki/sev/service/UserService.class
+mk/ukim/finki/sev/config/security/WebSecurityConfig.class
+mk/ukim/finki/sev/service/impl/UserServiceImpl.class
+mk/ukim/finki/sev/config/security/PasswordAndUsernameAuthenticationProvider.class
+mk/ukim/finki/sev/model/User.class
+mk/ukim/finki/sev/model/Role.class
+mk/ukim/finki/sev/config/security/CreateTestUsers.class
+mk/ukim/finki/sev/service/impl/MailSenderServiceImpl.class
+mk/ukim/finki/sev/controller/RegisterController.class
+mk/ukim/finki/sev/controller/EmailSender.class
+mk/ukim/finki/sev/service/MailSenderService.class

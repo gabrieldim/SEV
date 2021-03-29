@@ -1,0 +1,27 @@
+
+input[type=radio]{
+margin-left: 80px;
+    margin-bottom: 20px;
+}
+button {
+    /*background-color: #4CAF50;*/
+    background-color: cornflowerblue;
+    color: white;
+    padding: 14px 20px;
+    margin-left: 200px;
+    margin-bottom: 20px;
+    border: none;
+    cursor: pointer;
+
+    opacity: 0.9;
+}
+body {
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    overflow-x: hidden;
+    padding-top: 78px;
+    color: #5f6061;
+    text-decoration-style: wavy;
+}
+p { line-height: 2; color:#669999  }

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Sing Up</title>
+    <title>Get a certificate</title>
 
 
     <link rel="stylesheet"  href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" />
@@ -51,7 +51,7 @@
                             </li>
                             <li class="nav-item">
                                 <div class="tm-nav-link-highlight"></div>
-                                <a class="nav-link" href="/voting">Voting</a>
+                                <a class="nav-link" href="https://localhost:8444/vote">Vote</a>
                             </li>
                             <li class="nav-item">
                                 <div class="tm-nav-link-highlight"></div>
@@ -78,8 +78,8 @@
     </div>
     <form style="border:2px solid #ccc" action="/register" method="POST">
         <div class="container">
-            <h1 style="text-align: center">Sign Up</h1>
-            <p style="text-align: center">Please fill in this form to create an account.</p>
+            <h1 style="text-align: center">Get Certificate</h1>
+            <p style="text-align: center">Please fill in this form to get your client certificate.</p>
             <hr>
             <label style="text-align: center"><b>EMBG</b></label>
             <input type="text" placeholder="Enter EMBG" name="embg" required>
@@ -90,13 +90,13 @@
             <label><b>Last Name</b></label>
             <input type="text" placeholder="Enter LastName" name="lastname" required>
 
-            <label><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="password" required>
+            <label><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" required>
 
 
             <div class="clearfix">
                 <button type="button" class="cancelbtn">Cancel</button>
-                <button type="submit" class="signupbtn">Sign Up</button>
+                <button type="submit" class="signupbtn">Get your certificate</button>
             </div>
         </div>
     </form>

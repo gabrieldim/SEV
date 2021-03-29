@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Get a certificate</title>
+
+
+    <link rel="stylesheet"  href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" />
+    <link rel="stylesheet" href="/css/all.min.css" />
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/templatemo-style.css" />
+    <link rel="stylesheet" href="/css/singUp-login.css" />
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row tm-brand-row">
+        <div class="col-lg-4 col-10">
+            <div class="tm-brand-container">
+                <div class="tm-brand-texts">
+                    <h1 class="text-uppercase tm-brand-name">VOTE</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-8 col-2 tm-nav-col">
+            <div class="tm-nav">
+                <nav class="navbar navbar-expand-lg navbar-light tm-navbar">
+                    <button
+                            class="navbar-toggler"
+                            type="button"
+                            data-toggle="collapse"
+                            data-target="#navbarNav"
+                            aria-controls="navbarNav"
+                            aria-expanded="false"
+                            aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <form style="border:2px solid #ccc" action="/register" method="POST">
+        <div class="container">
+            <h1 style="text-align: center">Get Certificate</h1>
+            <p style="text-align: center">Please fill in this form to get your client certificate.</p>
+            <hr>
+            <label style="text-align: center"><b>EMBG</b></label>
+            <input type="text" placeholder="Enter EMBG" name="embg" required>
+
+            <label><b>Name</b></label>
+            <input type="text" placeholder="Enter Name" name="firstname" required>
+
+            <label><b>Last Name</b></label>
+            <input type="text" placeholder="Enter LastName" name="lastname" required>
+
+            <label><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" required>
+
+
+            <div class="clearfix">
+                <button type="button" class="cancelbtn">Cancel</button>
+                <button type="submit" class="signupbtn">Get your certificate</button>
+            </div>
+        </div>
+    </form>
+    <!-- Page footer -->
+    <footer class="row tm-page-footer">
+        <p class="col-12 tm-copyright-text mb-0">
+            Copyright &copy; 2021 Secure Electronic Voting - SEV ✔
+        </p>
+    </footer>
+</div>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/parallax.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+
+</body>
+</html>

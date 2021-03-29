@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: mk.ukim.finki.sev.SevApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 124.774 s - in mk.ukim.finki.sev.SevApplicationTests
