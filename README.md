@@ -40,7 +40,7 @@ These are both completely different systems and they both serve their specific t
 8. After the voting is completed the user can no longer vote again and an appropriate message will be shown.
 
 ---
-### Instructions
+## Instructions
 
 Install a .p12 certificate in Firefox:
 
