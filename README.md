@@ -1,5 +1,6 @@
 # SEV - Secure E-Voting
 
+
 ## The system is using mutual X.509 authentication
 
 The client verfies the server according to it's certificate, that certificate is issued by a trusted certificate authority.
